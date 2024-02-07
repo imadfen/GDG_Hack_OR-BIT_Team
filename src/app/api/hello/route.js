@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
-const ENV_VAR = process.env.ENV_VAR;
+// const ENV_VAR = process.env.ENV_VAR;
 
 export async function GET() {
-  console.log(`the example env value is: "${ENV_VAR}"`);
+  // console.log(`the example env value is: "${ENV_VAR}"`);
 
   return NextResponse.json({ message: "Hello Or-Bit" });
 }
