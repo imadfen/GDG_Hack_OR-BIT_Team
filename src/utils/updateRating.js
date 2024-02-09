@@ -1,10 +1,10 @@
 import mongoCollection from "./mongoCollection";
 
 export default async function updateRating(team_id, criteria, rate) {
-  const submissoinsCollection = await mongoCollection("submissions");
-  return await submissoinsCollection.updateOne(
-    { team_id, "rating.criteria": criteria },
-    { $set: { "rating.$.rate": rate } },
-    { upsert: true }
+  const submissionsCollection = await mongoCollection("submissions");
+  return await submissionsCollection.updateOne(
+    { team_id },
+    { $push: { rating: { criteria, rate } } }
   );
 }
+//skippit checking for now

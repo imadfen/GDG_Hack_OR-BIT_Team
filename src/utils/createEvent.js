@@ -21,6 +21,7 @@ export default async function createEvent(event) {
     judgement: false,
     feedbacks: [],
     Submissions: [],
+    anouncements: [],
   };
   try {
     const result = await events.insertOne(eventData);
