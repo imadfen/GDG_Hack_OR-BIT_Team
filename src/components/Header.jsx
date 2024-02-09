@@ -3,8 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <div
-      className="absolute top-0 left-0 z-0 h-full w-full overflow-hidden flex flex-col justify-center items-center"
-      style={{ backgroundImage: `url("/bgONE.png")` }}
+      className="absolute top-0 left-0 z-0 h-full w-full overflow-hidden flex flex-col justify-center items-center bg-transparent"
     >
       <div className="flex absolute top-0 items-center justify-between w-full">
         <img
