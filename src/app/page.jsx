@@ -1,9 +1,18 @@
-import Link from "next/link";
-import Login from "../pages/login"
-import { NoEvent } from "../pages/NoEvent";
-import { Feedback } from "../pages/Feedback";
+"use client"
+
+import NewEventForm from "@/components/NewEventForm";
+import { NoEvent } from "@/pages/NoEvent";
+import { useState } from "react";
+
 export default function Home() {
+  const [isNewEvent, setIsNewEvent] = useState(false);
   return (
-    <Feedback></Feedback>
+    <>
+      {isNewEvent ?
+        <NewEventForm onCancel={() => setIsNewEvent(false)} onCreate={() => { }} />
+        :
+        <NoEvent onNewEvent={() => setIsNewEvent(true)} />
+      }
+    </>
   );
 }

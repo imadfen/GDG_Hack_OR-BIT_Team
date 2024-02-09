@@ -8,7 +8,7 @@ export default async function updateEvent(eventId, eventData) {
     const client = await connectToDb();
     const events = await mongoCollection("events");
     // check if the event exists
-    const event = await events.findOne({ _id: ObjectId(eventId) });
+    const event = await events.findOne({ _id: new ObjectId(eventId) });
     if (!event) {
       throw new Error("Event not found");
     }
@@ -18,7 +18,7 @@ export default async function updateEvent(eventId, eventData) {
     event.start_date = start_date || event.start_date;
     event.end_date = end_date || event.end_date;
     const result = await events.updateOne(
-      { _id: ObjectId(eventId) },
+      { _id: new ObjectId(eventId) },
       { $set: event }
     );
     return result;
