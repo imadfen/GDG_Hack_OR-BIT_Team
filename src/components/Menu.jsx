@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Menu() {
   return (
-    <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 items-center">
+    <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 border-r-[1px] border-slate-600 items-center">
       <Image
         src="/logo.svg"
         className=" m-10"
@@ -85,7 +85,7 @@ function Menu() {
         </li>
       </ul>
       <button className="btn btn-sm self-center justify-self-center align-middle px-8 my-8 justify-center items-center bg-white text-[#4285F4]">
-        <Image src="SignOut.svg" width={20} height={20} alt="" /> Log out
+        <Image src="/SignOut.svg" width={20} height={20} alt="" /> Log out
       </button>
       <Image
         src="/GDGlogo.svg"
