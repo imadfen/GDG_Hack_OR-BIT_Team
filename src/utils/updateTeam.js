@@ -8,7 +8,7 @@ export default async function updateEvent(teamId, teamData) {
     const client = await connectToDb();
     const teams = await mongoCollection("teams");
     // check if the team exists
-    const team = await teams.findOne({ _id: ObjectId(teamId) });
+    const team = await teams.findOne({ _id: new ObjectId(teamId) });
     if (!team) {
       throw new Error("team not found");
     }
@@ -18,24 +18,24 @@ export default async function updateEvent(teamId, teamData) {
     team.login = login || team.login;
     team.password = password || team.password;
     const result = await teams.updateOne(
-      { _id: ObjectId(teamId) },
+      { _id: new ObjectId(teamId) },
       { $set: team }
     );
     //if its succeded in updating making sure its updated in the events collection
-    if(result.modifiedCount > 0){
-        const events = await mongoCollection("events");
-        const event = await events.findOne({ _id: ObjectId(eventID) });
-        if (!event) {
-            throw new Error("Event not found");
-        }
-        event.teams.push(team.team_name);
-        const result2 = await events.updateOne(
-            { _id: ObjectId(eventID) },
-            { $set: event }
-        );
-        return result2;
+    if (result.modifiedCount > 0) {
+      const events = await mongoCollection("events");
+      const event = await events.findOne({ _id: new ObjectId(eventID) });
+      if (!event) {
+        throw new Error("Event not found");
+      }
+      event.teams.push(team.team_name);
+      const result2 = await events.updateOne(
+        { _id: new ObjectId(eventID) },
+        { $set: { teams: event.teams } }
+      );
+      return result2;
     }
   } catch (e) {
-    console.log(e);
+    throw new Error(e);
   }
 }
