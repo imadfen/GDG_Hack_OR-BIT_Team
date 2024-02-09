@@ -1,14 +1,12 @@
 import React from 'react';
-import Header from '../components/Header';
 import Button from '../components/Button';
 import Cardhome from '../components/CardHome';
 export const Participant = () => {
   return (
     <div>
-      <Header />
       <div
         className="flex flex-col items-center justify-center h-screen  h-min-[100vh]"
-        style={{ backgroundImage: `url("/bgONE.png")` }}
+        // style={{ backgroundImage: `url("/bgONE.png")` }}
       >
         <div className="absolute top-[50px] left-14 mt-6 ml-6">
           <h3 className="text-white font-bold text-3xl">Team 1</h3>
@@ -40,10 +38,10 @@ export const Participant = () => {
             </div>
           </div>
 
-          
+
         </div>
       </div>
-      
+
       <div className="fixed bottom-0 left-0 w-full h-16 bg-transparent opacity-20 backdrop-blur-lg flex items-center px-4">
         <img src="/GDGlogo.svg" alt="Logo" className="h-5 ml-4" />
       </div>
