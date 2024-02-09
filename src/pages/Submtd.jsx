@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Button from '../components/Button';
 import Cardhome from '../components/CardHome';
-export const Participant = () => {
+export const Submtd = () => {
   return (
     <div>
       <Header />
@@ -15,7 +15,12 @@ export const Participant = () => {
         </div>
 
         <div className="absolute flex justify-center space-x-8 top-[150px]">
-          <Button>Submit</Button>
+          <Button>
+            <div className='flex items-center justify-center'>
+                <h1 className=''>Edit submission</h1>
+                <img src="/Edit.png" className='h-4 ml-2' alt="" />
+            </div>
+          </Button>
           <Button>Ask for a mentor</Button>
           <Button>Give feedback</Button>
         </div>
