@@ -1,9 +1,11 @@
 import React from "react";
 import Logo from '../assets/logo.svg'
-
+import VideoBackground from "@/components/VideoBackground";
 function Login() {
   return (
+    
     <div className="flex flex-col bg-slate-800">
+      <VideoBackground/>
       <img src={Logo} alt="nothing" />
       <div className="self-senter justify-self-center flex flex-col align-center items-center justify-center border rounded-[30px] md:mx-96 mx-24 text-white py-10 px-16 my-32">
         <h3 className="font-bold text-[36px] text-white text-center mb-6">
