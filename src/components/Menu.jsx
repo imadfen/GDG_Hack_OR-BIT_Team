@@ -5,8 +5,8 @@ function Menu() {
   return (
     <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 items-center">
       <Image
-        src="logo.svg"
-        className="w-[165px] m-10"
+        src="/logo.svg"
+        className=" m-10"
         alt=""
         width={165}
         height={50}
@@ -16,7 +16,8 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="dashboards.svg"
+              src="/dashboards.svg"
+              alt="dashboards"
               className="h-5 w-5 mr-4"
               width={20}
               height={20}
@@ -29,7 +30,8 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="mentors.svg"
+              src="/mentors.svg"
+              alt="mentors"
               className="h-5 w-5 mr-4"
               width={20}
               height={20}
@@ -42,7 +44,8 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="judges.svg"
+              src="/judges.svg"
+              alt="judges"
               className="h-5 w-5 mr-4"
               width={20}
               height={20}
@@ -55,7 +58,8 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="teams.svg"
+              src="/teams.svg"
+              alt="teams"
               className="h-5 w-5 mr-4"
               width={20}
               height={20}
@@ -68,7 +72,8 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="progress.svg"
+              src="/progress.svg"
+              alt="progress"
               className="h-5 w-5 mr-4"
               width={20}
               height={20}
@@ -80,11 +85,15 @@ function Menu() {
         </li>
       </ul>
       <button className="btn btn-sm self-center justify-self-center align-middle px-8 my-8 justify-center items-center bg-white text-[#4285F4]">
-        <Image src="SignOut.svg" width={20}
-        height={20} alt="" /> Log out
+        <Image src="SignOut.svg" width={20} height={20} alt="" /> Log out
       </button>
-      <Image src="GDGlogo.svg" width={150}
-      height={0} className="absolute bottom-3" alt="" />
+      <Image
+        src="/GDGlogo.svg"
+        width={150}
+        height={0}
+        className="absolute bottom-3"
+        alt=""
+      />
     </div>
   );
 }
