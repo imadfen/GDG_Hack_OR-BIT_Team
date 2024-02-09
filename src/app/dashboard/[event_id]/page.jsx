@@ -6,7 +6,7 @@ export default function page({ params }) {
     const { event_id } = params;
 
     return (
-        <div className="absolute flex flex-col pl-6 bg-[#060b26]">
+        <div className=" flex flex-col pl-6 bg-[#060b26]">
         <h3 className="text-white text-[28px] py-6">Welcome</h3>
         <div className="flex flex-row justify-start  gap-10 mt-4 mb-7">
           <Button>Set criteria</Button>
