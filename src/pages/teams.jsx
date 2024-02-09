@@ -1,8 +1,7 @@
 import React from "react";
-import Card from "../../../../components/card";
-import Image from 'next/image'
+import Card from "../components/card";
 
-export default function page() {
+function Teams() {
   return (
     <div className="absolute flex flex-col md:ml-[22%] ml-[30%]">
       <h3 className="text-white text-[28px] py-6">Teams</h3>
@@ -14,9 +13,9 @@ export default function page() {
         {
           <ul className="flex flex-col justify-between gap-2">
             {Array.from({ length: 8 }, (_, index) => (
-              <li className="my-2 flex justify-between" key={index + 1}>
+              <li className="my-2" key={index + 1}>
                 Tea {index + 1}
-                <Image src="/clock.svg" width={20} height={20} className="justify-self-end self-center"></Image>{" "}
+                <Image src="clock.svg" width={20} height={20}></Image>{" "}
               </li>
             ))}
           </ul>
@@ -25,3 +24,5 @@ export default function page() {
     </div>
   );
 }
+
+export default Teams;
