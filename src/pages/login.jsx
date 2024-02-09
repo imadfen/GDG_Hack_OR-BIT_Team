@@ -1,13 +1,25 @@
 import React from "react";
+import Image from "next/image";
 
 import VideoBackground from "@/components/VideoBackground";
 function Login() {
   return (
-    
     <div className="flex flex-col">
-      <VideoBackground/>
-      <img src="GDGlogo.svg" className="w-[180px] mt-3 ml-3" alt="" />
-      <img src='logo.svg' className='w-[300px] self-center justify-self-center mt-10 mb-6' alt="nothing" />
+      <VideoBackground />
+      <Image
+        src="GDGlogo.svg"
+        width={180}
+        height={0}
+        className=" mt-3 ml-3"
+        alt="gdglogo"
+      />
+      <Image
+        src="logo.svg"
+        width={300}
+        height={0}
+        className=" self-center justify-self-center mt-10 mb-6"
+        alt="nothing"
+      />
       <div className="self-senter justify-self-center flex flex-col align-center items-center justify-center border rounded-[30px] md:mx-[35%] mx-24 text-white py-5 px-10">
         <h3 className="font-bold text-[24px] text-white text-center mb-3">
           Let innovation grow <br /> Let ideas Flow
