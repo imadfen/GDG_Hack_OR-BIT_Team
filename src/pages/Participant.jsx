@@ -5,8 +5,7 @@ export const Participant = () => {
   return (
     <div>
       <div
-        className="flex flex-col items-center justify-center h-screen  h-min-[100vh]"
-        // style={{ backgroundImage: `url("/bgONE.png")` }}
+        className="flex flex-col items-center justify-center h-screen  h-min-[100vh] overflow-hidden"
       >
         <div className="absolute top-[50px] left-14 mt-6 ml-6">
           <h3 className="text-white font-bold text-3xl">Team 1</h3>
@@ -42,7 +41,7 @@ export const Participant = () => {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 w-full h-16 bg-transparent opacity-20 backdrop-blur-lg flex items-center px-4">
+      <div className="fixed bottom-0 left-0 w-full h-16 bg-transparent flex items-center px-4">
         <img src="/GDGlogo.svg" alt="Logo" className="h-5 ml-4" />
       </div>
     </div>
