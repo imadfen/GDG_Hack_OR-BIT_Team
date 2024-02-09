@@ -8,6 +8,22 @@
   position: relative;
   overflow: hidden;
 }
+/* This will affect the scrollbar globally */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6a6a6a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(54, 54, 54);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 .blur-background {
   content: "";
