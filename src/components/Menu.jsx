@@ -5,7 +5,7 @@ function Menu() {
   return (
     <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 items-center">
       <Image
-        src="logo.svg"
+        src="/logo.svg"
         className=" m-10"
         alt=""
         width={165}
@@ -16,7 +16,7 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="dashboards.svg"
+              src="/dashboards.svg"
               alt="dashboards"
               className="h-5 w-5 mr-4"
               width={20}
@@ -30,7 +30,7 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="mentors.svg"
+              src="/mentors.svg"
               alt="mentors"
               className="h-5 w-5 mr-4"
               width={20}
@@ -44,7 +44,7 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="judges.svg"
+              src="/judges.svg"
               alt="judges"
               className="h-5 w-5 mr-4"
               width={20}
@@ -58,7 +58,7 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="teams.svg"
+              src="/teams.svg"
               alt="teams"
               className="h-5 w-5 mr-4"
               width={20}
@@ -72,7 +72,7 @@ function Menu() {
         <li className="py-2">
           <a>
             <Image
-              src="progress.svg"
+              src="/progress.svg"
               alt="progress"
               className="h-5 w-5 mr-4"
               width={20}
@@ -88,7 +88,7 @@ function Menu() {
         <Image src="SignOut.svg" width={20} height={20} alt="" /> Log out
       </button>
       <Image
-        src="GDGlogo.svg"
+        src="/GDGlogo.svg"
         width={150}
         height={0}
         className="absolute bottom-3"
