@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ParticipantHomePage = () => {
+export const Header = () => {
   return (
     <div
       className="absolute top-0 left-0 z-0 h-full w-full overflow-hidden flex flex-col justify-center items-center"
@@ -12,6 +12,7 @@ export const ParticipantHomePage = () => {
           alt=""
           className="h-10 ml-4 mt-4"
         />
+        
         <div className=" w-[50%] h-6 mt-3 bg-[#292c50] rounded-full dark:bg-gray-700 border border-cyan-700">
           <div className=" h-full bg-blue-600 text-xs font-medium text-blue-100 text-center leading-none rounded-full" style={{ width: '45%' }}>
             {' '}
@@ -27,6 +28,7 @@ export const ParticipantHomePage = () => {
             </button>
         </div>
       </div>
+      
     </div>
   );
 };
