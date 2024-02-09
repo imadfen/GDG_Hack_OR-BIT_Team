@@ -12,7 +12,7 @@ function Menu() {
         height={50}
       />
       <h4 className="font-bold text-[20px] self-start ml-8">Menu</h4>
-      <ul className="menu w-50 self-start rounded-box">
+      <ul className="menu w-64 self-start rounded-box">
         <li className="py-2">
           <a>
             <Image

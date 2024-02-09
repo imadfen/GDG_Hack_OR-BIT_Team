@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <div className=" flex flex-col pl-6 bg-[#060b26] min-h-[100vh] ">
+    <div className=" flex flex-col pl-6 bg-gradient-to-br from-[#060b26] to-black  min-h-[100vh] ">
       <div className="flex flex-row justify-between items-center text-center">
         <h3 className="text-white font-semibold text-[28px] py-6 ml-12 md:ml-1">Teams</h3>
         <button className="self-end bg-[#0062D5] rounded-[10px] text-white px-5 py-2 justify-self-end text-center mr-10 mb-4 flex flex-row justify-between gap-3">
