@@ -1,10 +1,8 @@
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import { getServerSession } from "next-auth";
-import { options } from "./api/auth/[...nextauth]";
-// import { redirect } from "next/navigation";
-// import { SessionProvider } from "next-auth/react";
-// import { headers } from "next/headers";
+
+import Menu from "@/components/Menu";
+import VideoBackground from "@/components/VideoBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,11 +28,13 @@ export default async function RootLayout({ children }) {
     // <SessionProvider session={session}>
     <html lang="en">
       <body className={`cursor-default ${inter.className}`}>
-        {/* {session ? */}
-        {children}
-        {/* :
-          null
-        } */}
+        <VideoBackground />
+        <div className="min-h-screen grid grid-cols-6 gap-4">
+          <div className="col-span-2">
+            <Menu />
+          </div>
+          <div className="col-span-4">{children}</div>
+        </div>
       </body>
     </html>
     // </SessionProvider>
