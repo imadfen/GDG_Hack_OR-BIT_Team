@@ -3,6 +3,7 @@
 // import { signIn } from 'next-auth/react';
 import VideoBackground from "@/components/VideoBackground";
 import BluredCard from '@/components/BluredCard';
+import Image from 'next/image';
 // import { useRouter } from 'next/navigation';
 // import { useState } from 'react';
 
@@ -29,8 +30,8 @@ function Login() {
   return (
     <div className="flex flex-col">
       <VideoBackground />
-      <img src="GDGlogo.svg" className="w-[180px] mt-3 ml-3" alt="" />
-      <img src='logo.svg' className='w-[300px] self-center justify-self-center mt-10 mb-6' alt="nothing" />
+      <Image src="GDGlogo.svg" height={40} width={180} className="w-[180px] mt-3 ml-3" alt="" />
+      <Image src='logo.svg' height={40} width={180} className='w-[300px] self-center justify-self-center mt-10 mb-6' alt="nothing" />
       <BluredCard className="self-senter justify-self-center flex flex-col align-center items-center justify-center border rounded-[30px] md:mx-[35%] mx-24 text-white py-5 px-10">
         <h3 className="font-bold text-[24px] text-white text-center mb-3">
           Let innovation grow <br /> Let ideas Flow
