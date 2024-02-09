@@ -23,19 +23,10 @@ export default async function RootLayout({ children }) {
   //   return null
   // }
 
-
   return (
     // <SessionProvider session={session}>
     <html lang="en">
-      <body className={`cursor-default ${inter.className}`}>
-        <VideoBackground />
-        <div className="min-h-screen grid grid-cols-6 gap-4">
-          <div className="col-span-2">
-            <Menu />
-          </div>
-          <div className="col-span-4">{children}</div>
-        </div>
-      </body>
+      <body className={`cursor-default ${inter.className}`}>{children}</body>
     </html>
     // </SessionProvider>
   );

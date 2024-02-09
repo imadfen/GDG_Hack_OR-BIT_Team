@@ -1,13 +1,13 @@
-import Menu from '@/components/Menu'
-import React from 'react'
+import Menu from "@/components/Menu";
+import React from "react";
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
-    <div className="w-full h-full flex">
+    <div className="grid grid-cols-5">
+      <div className="col-span-1">
         <Menu />
-        <div className="flex-grow">
-            {children}
-        </div>
+      </div>
+      <div className="col-span-4">{children}</div>
     </div>
-  )
+  );
 }
