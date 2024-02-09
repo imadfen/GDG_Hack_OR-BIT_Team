@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
+import Menu from "@/components/Menu";
+import VideoBackground from "@/components/VideoBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`cursor-default ${inter.className}`}>{children}</body>
+      <body className={`cursor-default ${inter.className}`}>
+        <VideoBackground />
+        <div className="min-h-screen grid grid-cols-6 gap-4">
+          <div className="col-span-2">
+            <Menu />
+          </div>
+          <div className="col-span-4">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

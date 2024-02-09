@@ -6,8 +6,9 @@ import Judges from "../pages/judges";
 export default function Home() {
   return (
     <>
-      <Menu></Menu>
-      <Judges></Judges>
+      <layouts>
+        <Judges />
+      </layouts>
     </>
   );
 }
