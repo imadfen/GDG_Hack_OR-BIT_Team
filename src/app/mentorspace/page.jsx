@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function page() {
     const [availability, setAvailability] = useState(true);
+    const [queue, setQueue] = useState([1, 2, 3]);
 
     return (
         <div className='flex flex-col'>
@@ -27,13 +28,13 @@ export default function page() {
 
                     <div className="flex justify-center px-32 flex-grow overflow-hidden">
                         <div className="w-full overflow-y-auto flex flex-col gap-5">
-                            {Array(3).fill(null).map((_, i) => (
+                            {queue.map((v, i) => (
                                 <BluredCard key={i} className="w-full bg-white border rounded-3xl px-5 py-3 flex items-center">
                                     <div>
-                                        <p className="text-xl">Team {i + 1}</p>
+                                        <p className="text-xl">Team {v}</p>
                                         <p className="ml-5">20min ago</p>
                                     </div>
-                                    <button className="h-fit ml-auto py-2 px-4 text-md rounded-2xl text-white bg-[#0062D5]">Done</button>
+                                    <button className="h-fit ml-auto py-2 px-4 text-md rounded-2xl text-white bg-[#0062D5]" onClick={() => setQueue(old => old.filter((_, j) => i != j))}>Done</button>
                                 </BluredCard>
                             ))}
                         </div>
