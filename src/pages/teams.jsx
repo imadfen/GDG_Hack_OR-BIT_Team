@@ -21,6 +21,7 @@ function Teams() {
           </ul>
         }
       </Card>
+     < Teamcard></Teamcard>
     </div>
   );
 }
