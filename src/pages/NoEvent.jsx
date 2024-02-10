@@ -1,8 +1,12 @@
+"use client"
+
 import React from 'react';
 import VideoBackground from '../components/VideoBackground';
+import { useRouter } from 'next/navigation';
 
 
 export const NoEvent = ({ onNewEvent }) => {
+  const router = useRouter();
   return (
     <div>
       <VideoBackground />
@@ -21,7 +25,7 @@ export const NoEvent = ({ onNewEvent }) => {
           No current events
         </h1>
         <div className='flex justify-center mt-20'>
-          <button className='text-white mr-8 border border-white px-5 py-5 rounded-lg min-w-[150px] w-5 '>Archive of events</button>
+          <button className='text-white mr-8 border border-white px-5 py-5 rounded-lg min-w-[150px] w-5 ' onClick={()=>router.push("dashboard/archive")}>Archive of events</button>
           <button className='text-white ml-20 border border-white px-4 py-2 rounded-lg min-w-[150px]' onClick={onNewEvent} >Create event</button>
         </div>
 

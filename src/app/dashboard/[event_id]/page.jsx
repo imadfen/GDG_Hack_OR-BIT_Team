@@ -5,10 +5,12 @@ import Button from "../../../components/Button";
 import Card from "../../../components/card";
 import CreateCriteria from '@/components/CreateCriteria';
 import CreateAnnounecement from '@/components/CreateAnnouncement';
+import { useRouter } from 'next/navigation';
 
 export default function page() {
   const [isCreateCriteria, setIsCreateCriteria] = useState(false);
   const [newAnnouncement, setNewAnnouncement] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -26,7 +28,7 @@ export default function page() {
             <h3 className="text-white text-[28px] py-6">Welcome</h3>
             <div className="flex flex-row justify-start  gap-10 mt-4 mb-7">
               <Button onClick={() => setIsCreateCriteria(true)}>Set criteria</Button>
-              <Button onClick={() => { }}>Events archive</Button>
+              <Button onClick={() => router.replace("archive")}>Events archive</Button>
             </div>
             <button className="self-end bg-[#0062D5] rounded-[10px] text-white px-5 py-2 justify-self-end justify-end text-center mr-10 mb-4" onClick={() => setNewAnnouncement(true)}>
               + New announce
