@@ -27,7 +27,6 @@ export default function AskForMentor({ onCancel, onCreate }) {
                                 ))
                             }
                         </div>
-
                     </div>
                 </div>
             </BluredCard>
