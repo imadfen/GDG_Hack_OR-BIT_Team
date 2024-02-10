@@ -14,7 +14,8 @@
     "next-auth": "^4.24.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.50.1"
+    "react-hook-form": "^7.50.1",
+    "react-simple-star-rating": "^5.1.7"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
