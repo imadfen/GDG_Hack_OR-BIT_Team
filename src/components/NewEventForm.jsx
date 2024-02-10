@@ -1,7 +1,9 @@
+"use client";
 import BluredCard from "./BluredCard";
 import VideoBackground from "./VideoBackground";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 export default function NewEventForm({ onCancel, onCreate }) {
@@ -11,10 +13,13 @@ export default function NewEventForm({ onCancel, onCreate }) {
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+
   //onsubmit
   const onSubmit = async (data) => {
     console.log(data);
-    const response = await fetch("/api/createevent", {
+    router.replace("dashboard/dfsfdsfs/teams");
+    const response = fetch("/api/createevent", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
