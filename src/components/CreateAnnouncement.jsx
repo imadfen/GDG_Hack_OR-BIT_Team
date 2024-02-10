@@ -1,13 +1,9 @@
 import BluredCard from "./BluredCard";
-import VideoBackground from "./VideoBackground";
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 
 export default function CreateAnnounecement({ onCancel, onCreate }) {
   return (
     <div className="w-full min-h-[100vh] flex flex-col">
-      <VideoBackground />
-      <Image src="logo.svg" height={40} width={180} className="w-[180px] mt-2 mb-6" alt="nothing" />
       <BluredCard className="w-1/2 self-center justify-self-center flex flex-col align-center justify-center border rounded-[30px] md:mx-[35%] mx-24 text-white">
         <div className="w-full border-b flex items-center p-3 gap-2">
           <Icon

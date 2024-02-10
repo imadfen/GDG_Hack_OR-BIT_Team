@@ -1,13 +1,30 @@
+import { useForm } from "react-hook-form";
 import BluredCard from "./BluredCard";
-import VideoBackground from "./VideoBackground";
 import { Icon } from "@iconify/react";
-import Image from "next/image";
+import { useState } from "react";
 
 export default function CreateJudgeForm({ onCancel, onCreate }) {
+  const [select, setSelect] = useState("0");
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    console.log(data);
+    const response = await fetch("/api/createevent", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    console.log(response);
+  };
+
   return (
     <div className="w-full min-h-[100vh] flex flex-col">
-      <VideoBackground />
-      <Image src="logo.svg" height={40} width={180} className="w-[180px] mt-2 mb-6" alt="nothing" />
       <BluredCard className="w-1/2 self-center justify-self-center flex flex-col align-center justify-center border rounded-[30px] md:mx-[35%] mx-24 text-white">
         <div className="w-full border-b flex items-center p-3 gap-2">
           <Icon
@@ -18,7 +35,7 @@ export default function CreateJudgeForm({ onCancel, onCreate }) {
           />
           <p className="text-lg font-bold">Add new judge</p>
         </div>
-        <form className="px-10 py-8 relative">
+        <form className="px-10 py-8 relative" onSubmit={handleSubmit(onSubmit, (e) => console.error(e))}>
           <div className="flex gap-10">
             <div className="w-2/3">
               <h5 className="text-lg font-regular text-[16px] text-left self-start my-1 ml-3">
@@ -26,8 +43,8 @@ export default function CreateJudgeForm({ onCancel, onCreate }) {
               </h5>
               <input
                 type="text"
-                name="judge_name"
                 placeholder="Event name"
+                {...register("name", { required: "This field is required" })}
                 className="w-[80%] self-start input bordered-20 bg-opacity-[12%] bg-white mb-4 rounded-2xl"
               />
 
@@ -37,18 +54,19 @@ export default function CreateJudgeForm({ onCancel, onCreate }) {
               <div className="w-[80%] self-start input bordered-20 bg-opacity-[12%] bg-white mb-4 rounded-2xl flex items-center">
                 <input
                   type="text"
-                  name="judge_field"
-                  placeholder="dd/mm/yyyy"
+                  placeholder="Judge field"
+                  {...register("field", { required: "This field is required" })}
                   className="bg-transparent flex-grow"
                 />
-                <Icon icon="uil:calender" width={24} />
               </div>
 
               <h5 className="text-lg font-regular text-[16px] text-left self-start my-1 ml-3">
                 select judge Criteria
               </h5>
-              <select name="judge critiere" className="w-[80%] self-start input bordered-20 bg-opacity-[12%] bg-white mb-4 rounded-2xl" >
-                <option value="1" selected>select criteria</option>
+              <select name="judge critiere" className="w-[80%] self-start input bordered-20 bg-opacity-[12%] bg-white mb-4 rounded-2xl"
+                value={select} onChange={(e) => setSelect(e.target.value)}
+              >
+                <option value="0" selected>select criteria</option>
                 <option value="1">ui / ux</option>
                 <option value="2">flexibilte</option>
                 <option value="3">securite</option>
@@ -60,7 +78,7 @@ export default function CreateJudgeForm({ onCancel, onCreate }) {
           <button
             className="rounded-2xl p-2 bg-[#0062D5] text-white text-[16px] absolute bottom-3 right-5"
             onClick={onCreate}
-            type="button"
+            type="submit"
           >
             send
           </button>

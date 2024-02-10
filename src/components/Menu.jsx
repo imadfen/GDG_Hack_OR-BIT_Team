@@ -4,9 +4,9 @@ import Link from "next/link";
 
 function Menu({ event_id }) {
   return (
-    <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 border-r-[1px] border-slate-600 items-center">
-      <h4 className="font-bold text-[20px] self-start mt-10 ml-8">Menu</h4>
-      <ul className="menu w-60 mx-5 rounded-box">
+    <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 border-r-[1px] border-slate-600 bg-[#060b26] items-center">
+      <h4 className="font-bold text-[20px] self-start ml-8 mt-10">Menu</h4>
+      <ul className="menu w-64 self-start rounded-box">
         <li className="py-2">
           <Link href={`/dashboard/${event_id}/`}>
             <Image

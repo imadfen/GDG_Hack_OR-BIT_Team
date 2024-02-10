@@ -1,6 +1,10 @@
-import React from 'react';
+"use client"
+
+import { useRouter } from "next/navigation";
 
 const Header = ({ isAdmin }) => {
+  const router = useRouter();
+
   return (
     <div
       className="relative h-full w-full overflow-hidden flex flex-col justify-center items-center"
@@ -24,7 +28,7 @@ const Header = ({ isAdmin }) => {
               <img src="/user.png" className='mr-7' alt="" />
             </div>
             :
-            <button className="flex bg-white justify-center text-blue border rounded-lg px-7 py-1 pr-10 ml-4">
+            <button className="flex bg-white justify-center text-blue border rounded-lg px-7 py-1 pr-10 ml-4" onClick={() => { router.push("/login") }}>
               <img src="/SignOut.png" className='mr-7' alt="" />
               <span>Log out</span>
             </button>

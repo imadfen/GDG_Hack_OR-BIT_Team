@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Home() {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   const router = useRouter();
 
   if (user) {
@@ -12,6 +12,6 @@ export default function Home() {
   } else {
     router.push("login");
   }
-  
+
   return (null);
 }
