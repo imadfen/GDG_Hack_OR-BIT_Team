@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-function Menu() {
+function Menu({ event_id }) {
   return (
     <div className="fixed flex h-full flex-col text-white pl-5 md:pl-0 md:w-[19%] w-48 border-r-[1px] border-slate-600 bg-[#060b26] items-center">
       <Image
@@ -14,7 +15,7 @@ function Menu() {
       <h4 className="font-bold text-[20px] self-start ml-8">Menu</h4>
       <ul className="menu w-64 self-start rounded-box">
         <li className="py-2">
-          <a>
+          <Link href={`/dashboard/${event_id}/`}>
             <Image
               src="/dashboards.svg"
               alt="dashboards"
@@ -25,10 +26,10 @@ function Menu() {
               stroke="currentColor"
             />
             Dashboards
-          </a>
+          </Link>
         </li>
         <li className="py-2">
-          <a>
+          <Link href={`/dashboard/${event_id}/mentors`}>
             <Image
               src="/mentors.svg"
               alt="mentors"
@@ -39,10 +40,10 @@ function Menu() {
               stroke="currentColor"
             />
             Mentors
-          </a>
+          </Link>
         </li>
         <li className="py-2">
-          <a>
+          <Link href={`/dashboard/${event_id}/judges`}>
             <Image
               src="/judges.svg"
               alt="judges"
@@ -53,10 +54,10 @@ function Menu() {
               stroke="currentColor"
             />
             Judges
-          </a>
+          </Link>
         </li>
         <li className="py-2">
-          <a>
+          <Link href={`/dashboard/${event_id}/teams`}>
             <Image
               src="/teams.svg"
               alt="teams"
@@ -67,10 +68,10 @@ function Menu() {
               stroke="currentColor"
             />
             Teams
-          </a>
+          </Link>
         </li>
         <li className="py-2">
-          <a>
+          <Link href={`/dashboard/${event_id}/progress`}>
             <Image
               src="/progress.svg"
               alt="progress"
@@ -81,7 +82,7 @@ function Menu() {
               stroke="currentColor"
             />
             Progress
-          </a>
+          </Link>
         </li>
       </ul>
       <button className="btn btn-sm self-center justify-self-center align-middle px-8 my-8 justify-center items-center bg-white text-[#4285F4]">
