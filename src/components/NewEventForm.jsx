@@ -77,7 +77,6 @@ export default function NewEventForm({ onCancel, onCreate }) {
                   placeholder="dd/mm/yyyy"
                   className="bg-transparent flex-grow"
                 />
-                <Icon icon="uil:calender" width={24} />
               </div>
 
               <h5 className="text-lg font-regular text-[16px] text-left self-start my-1 ml-3">
@@ -91,7 +90,6 @@ export default function NewEventForm({ onCancel, onCreate }) {
                   placeholder="dd/mm/yyyy"
                   className="bg-transparent flex-grow"
                 />
-                <Icon icon="uil:calender" width={24} />
               </div>
 
               <h5 className="text-lg font-regular text-[16px] text-left self-start my-1 ml-3">
