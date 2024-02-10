@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 export default function CreateNewTeamForm({ onCancel, onCreate }) {
-  const[handleInput, setHandleInput] = useState(null);
+  const [handleInput, setHandleInput] = useState(null);
   const [members, setMembers] = useState([]);
   const {
     register,
@@ -36,14 +36,6 @@ export default function CreateNewTeamForm({ onCancel, onCreate }) {
 
   return (
     <div className="w-full min-h-[100vh] flex flex-col">
-      <VideoBackground />
-      <Image
-        height={40}
-        width={180}
-        src="logo.svg"
-        className="w-[180px] mt-2 mb-6"
-        alt="nothing"
-      />
       <BluredCard className="w-1/2 self-center justify-self-center flex flex-col align-center justify-center border rounded-[30px] md:mx-[35%] mx-24 text-white">
         <div className="w-full border-b flex items-center p-3 gap-2">
           <Icon

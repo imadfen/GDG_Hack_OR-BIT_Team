@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function layout({ children }) {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Header />
       {children}
     </div>
