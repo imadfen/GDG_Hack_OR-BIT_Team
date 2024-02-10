@@ -1,6 +1,6 @@
-import React from 'react';
-import Button from '../components/Button';
-import Cardhome from '../components/CardHome';
+import React from "react";
+import Button from "../components/Button";
+import Cardhome from "../components/CardHome";
 export const Participant = () => {
   return (
     <div>
@@ -11,16 +11,13 @@ export const Participant = () => {
         <div className="absolute top-[50px] left-14 mt-6 ml-6">
           <h3 className="text-white font-bold text-3xl">Team 1</h3>
         </div>
-
         <div className="absolute flex justify-center space-x-8 top-[150px]">
           <Button>Submit</Button>
           <Button>Ask for a mentor</Button>
           <Button>Give feedback</Button>
         </div>
-
         <div className="absolute top-[230px] left-14 mb-2">
           <h1 className="text-lg font-bold text-white">Announcements</h1>
-
           <div className="h-64 carousel carousel-vertical rounded-box">
             <div className="carousel-item h-full">
               <Cardhome
@@ -37,8 +34,6 @@ export const Participant = () => {
               />
             </div>
           </div>
-
-
         </div>
       </div>
 
